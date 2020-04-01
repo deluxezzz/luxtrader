@@ -1,0 +1,92 @@
+@import url("nullstyle.css");
+* {
+  color: #ffffff;
+}
+
+.container {
+  width: 979px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #1c242a;
+  height: 75px;
+  text-transform: uppercase;
+}
+.header__wp {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  padding-bottom: 12px;
+}
+.header__link {
+  margin: 0 14px;
+}
+.header__region {
+  height: 18px;
+  display: flex;
+  align-items: center;
+}
+.header__region img {
+  margin-right: 11px;
+}
+
+.main__wp {
+  height: 450px;
+  width: 100%;
+  background-image: url(../img/main__bg.png);
+  background-color: #000;
+  text-align: center;
+}
+.main__subtitle {
+  padding-top: 34px;
+}
+.main__title {
+  padding-top: 24px;
+}
+.main__text {
+  padding-top: 27px;
+  max-width: 688px;
+  margin: 0 auto;
+}
+.main__button {
+  margin-top: 58px;
+  width: 250px;
+  height: 50px;
+  font-family: "Idealist Sans";
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  color: #bb9c66;
+  font-family: "Ceremonious One";
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.title {
+  font-family: "PF Din Text Cond Pro";
+  font-size: 35px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 5.25px;
+}
+
+.text {
+  font-family: "PT Sans";
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.button {
+  border: 3px solid #bb9c66;
+  border-image: linear-gradient(#c3a775, #8d642e);
+  border-image-slice: 1;
+  background: transparent;
+}
