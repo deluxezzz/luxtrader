@@ -1,9 +1,18 @@
 @import url("nullstyle.css");
-* {
+@font-face {
+	font-family: "Bravo RG";
+	src: url('fonts/ofont.ru_BravoRG.eot');
+	src: url('../fonts/ofont.ru_BravoRG.woff') format('woff'), url('../fonts/ofont.ru_BravoRG.ttf') format('truetype'), url('../fonts/ofont.ru_BravoRG.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body, a {
     color: #ffffff;
 }
+
 .container {
-    width: 979px;
+    max-width: 979px;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -33,6 +42,37 @@
     }
 }
 
+.subtitle {
+    color: #bb9c66;
+    font-family: "Ceremonious One";
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.title {
+    font-family: "PF Din Text Cond Pro";
+    font-size: 35px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5.25px;
+}
+
+.text {
+    font-family: "PT Sans";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.button {
+    color: #fff;
+    text-transform: uppercase;
+    border: 3px solid #bb9c66;
+    border-image: linear-gradient(#c3a775 , #8d642e);
+    border-image-slice: 1;
+    background: transparent;
+}
+
 
 .main {
     &__wp {
@@ -41,6 +81,7 @@
     background-image: url(../img/main__bg.png); 
     background-color: #000;
     text-align: center;
+    position: relative;
     }
     &__subtitle {
         padding-top: 34px;
@@ -63,32 +104,103 @@
         font-weight: 400;
         text-transform: uppercase;
     }
+    &__figure {
+        position: absolute;
+        z-index: 2;
+        bottom:-35px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+    }
 }
 
-.subtitle {
-    color: #bb9c66;
-    font-family: "Ceremonious One";
-    font-size: 40px;
-    font-weight: 400;
+.figure {
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    display: block;
 }
 
-.title {
-    font-family: "PF Din Text Cond Pro";
-    font-size: 35px;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 5.25px;
+.auction {
+    text-align: center;
+    &__subtitle {
+        padding-top: 65px;
+    }
+    &__title {
+        padding-top: 27px;
+        color: #000;
+    }
+    &__border {
+        padding-top: 21px;
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
+        & div:nth-child(3) {
+            flex: 0 1 15.8%;
+        }
+        & .line {
+            flex: 0 1 35.3%;
+            height: 1px;
+            background-color: #bb9c66;
+        }
+    }
+    &__lots {
+        padding-top: 49px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__lot {
+        color: #000;
+        flex: 0 1 255px*100%/949px;
+        
+    }
+    
 }
 
-.text {
-    font-family: "PT Sans";
-    font-size: 15px;
-    font-weight: 400;
-}
+.lot {
+    &__photo {
+        height: 255px;
+        border: 2px solid #bb9c66;
+        position: relative;
+    }
+    &__figure {
+        position: absolute;
+        z-index: 2;
+        bottom:-35px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+    }
+    &__name {
+        padding-top: 30px;
+        font-family: "PF Din Text Cond Pro";
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 25px;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 3;
+    }
+    &__price {
+        margin-top: 30px;
+        height: 100px;
+        background-image: url(../img/lots/bg-lot-1.png);
+        color: #1c242a;
+        font-family: "Bravo RG";
+        font-size: 50px;
+        font-weight: 400;
+        text-align: center;
+        line-height: 100px;
 
-.button {
-    border: 3px solid #bb9c66;
-    border-image: linear-gradient(#c3a775 , #8d642e);
-    border-image-slice: 1;
-    background: transparent;
+    }
+    &__button {
+        margin-top: 24px;
+        color: #000;
+        width: 203px;
+        height: 50px;
+        color: #000000;
+        font-family: "PF Din Text Cond Pro";
+        font-size: 21px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
 }
