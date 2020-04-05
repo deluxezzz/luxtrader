@@ -6,6 +6,13 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'PF Din Text Cond Pro';
+	src: url('fonts/ofont.ru_PF Din Text Cond Pro.eot');
+	src: local('☺'), url('../fonts/ofont.ru_PF Din Text Cond Pro.woff') format('woff'), url('../fonts/ofont.ru_PF Din Text Cond Pro.ttf') format('truetype'), url('../fonts/ofont.ru_PF Din Text Cond Pro.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 
 body, a {
     color: #ffffff;
@@ -123,6 +130,17 @@ body, a {
 
 .auction {
     text-align: center;
+    &__lots-wp {
+        width: 949px;
+        overflow: hidden;
+    }
+    &__lots {
+        width: 949px + 949px;
+        position: relative;
+        left: 0;
+
+        transition: left ease 0.5s;
+    }
     &__subtitle {
         padding-top: 65px;
     }
@@ -146,13 +164,14 @@ body, a {
         }
     }
     &__lots {
+        padding-left: 22px;
         padding-top: 49px;
         display: flex;
         justify-content: space-between;
     }
     &__lot {
         color: #000;
-        flex: 0 1 255px*100%/949px;
+        flex: 0 1 255px*100%/(949px + 949px);
     }
     &__nav {
         margin-top: 50px;
@@ -198,6 +217,7 @@ body, a {
         transform: translateX(-50%) rotate(45deg);
     }
     &__name {
+        height: 100px;
         padding-top: 30px;
         font-family: "PF Din Text Cond Pro";
         font-size: 21px;
@@ -210,15 +230,17 @@ body, a {
     &__price {
         margin-top: 30px;
         height: 100px;
-        background-image: url(../img/lots/bg-lot-1.png);
         color: #1c242a;
         font-family: "Bravo RG";
         font-size: 50px;
         font-weight: 400;
         text-align: center;
         line-height: 100px;
-
+        & span {
+            font-size: 14px;
+        }
     }
+    
     &__button {
         
         margin-top: 24px;
@@ -240,6 +262,20 @@ body, a {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+#lot__price {
+    &1 {
+        background-image: url(../img/lots/bg-lot-1.png);
+    }
+    &2 {
+        background-image: url(../img/lots/bg-lot-2.png);
+    }
+    &3 {
+        background-image: url(../img/lots/bg-lot-3.png);
+    }
+}
+
+
 .item {
     margin-top: 30px;
 

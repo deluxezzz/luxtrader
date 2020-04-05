@@ -1,68 +1,63 @@
+@charset "UTF-8";
 @import url("nullstyle.css");
 @font-face {
   font-family: "Bravo RG";
   src: url("fonts/ofont.ru_BravoRG.eot");
   src: url("../fonts/ofont.ru_BravoRG.woff") format("woff"), url("../fonts/ofont.ru_BravoRG.ttf") format("truetype"), url("../fonts/ofont.ru_BravoRG.svg") format("svg");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
+@font-face {
+  font-family: 'PF Din Text Cond Pro';
+  src: url("fonts/ofont.ru_PF Din Text Cond Pro.eot");
+  src: local("☺"), url("../fonts/ofont.ru_PF Din Text Cond Pro.woff") format("woff"), url("../fonts/ofont.ru_PF Din Text Cond Pro.ttf") format("truetype"), url("../fonts/ofont.ru_PF Din Text Cond Pro.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 body, a {
-  color: #ffffff;
-}
+  color: #ffffff; }
 
 .container {
   max-width: 979px;
   padding: 0 15px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 .header {
   background-color: #1c242a;
   height: 75px;
-  text-transform: uppercase;
-}
-.header__wp {
-  height: 75px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header__logo {
-  padding-bottom: 12px;
-}
-.header__link {
-  margin: 0 14px;
-}
-.header__region {
-  height: 18px;
-  display: flex;
-  align-items: center;
-}
-.header__region img {
-  margin-right: 11px;
-}
+  text-transform: uppercase; }
+  .header__wp {
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .header__logo {
+    padding-bottom: 12px; }
+  .header__link {
+    margin: 0 14px; }
+  .header__region {
+    height: 18px;
+    display: flex;
+    align-items: center; }
+    .header__region img {
+      margin-right: 11px; }
 
 .subtitle {
   color: #bb9c66;
   font-family: "Ceremonious One";
   font-size: 40px;
-  font-weight: 400;
-}
+  font-weight: 400; }
 
 .title {
   font-family: "PF Din Text Cond Pro";
   font-size: 35px;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 5.25px;
-}
+  letter-spacing: 5.25px; }
 
 .text {
   font-family: "PT Sans";
   font-size: 15px;
   font-weight: 400;
-  line-height: 25px;
-}
+  line-height: 25px; }
 
 .button {
   color: #fff;
@@ -70,8 +65,7 @@ body, a {
   border: 3px solid #bb9c66;
   border-image: linear-gradient(#c3a775, #8d642e);
   border-image-slice: 1;
-  background: transparent;
-}
+  background: transparent; }
 
 .main__wp {
   height: 450px;
@@ -79,19 +73,15 @@ body, a {
   background-image: url(../img/main__bg.png);
   background-color: #000;
   text-align: center;
-  position: relative;
-}
+  position: relative; }
 .main__subtitle {
-  padding-top: 34px;
-}
+  padding-top: 34px; }
 .main__title {
-  padding-top: 24px;
-}
+  padding-top: 24px; }
 .main__text {
   padding-top: 27px;
   max-width: 688px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 .main__button {
   margin-top: 58px;
   width: 250px;
@@ -99,94 +89,87 @@ body, a {
   font-family: "Idealist Sans";
   font-size: 15px;
   font-weight: 400;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 .main__figure {
   position: absolute;
   z-index: 2;
   bottom: -35px;
   left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-}
+  transform: translateX(-50%) rotate(45deg); }
 
 .figure {
   width: 70px;
   height: 70px;
   background-color: #fff;
-  display: block;
-}
+  display: block; }
 
 .auction {
-  text-align: center;
-}
-.auction__subtitle {
-  padding-top: 65px;
-}
-.auction__title {
-  padding-top: 27px;
-  color: #000;
-}
-.auction__border {
-  padding-top: 21px;
-  display: flex;
-  justify-content: center;
-  justify-content: space-between;
-  align-items: center;
-}
-.auction__border div:nth-child(3) {
-  flex: 0 1 15.8%;
-}
-.auction__border .line {
-  flex: 0 1 35.3%;
-  height: 1px;
-  background-color: #bb9c66;
-}
-.auction__lots {
-  padding-top: 49px;
-  display: flex;
-  justify-content: space-between;
-}
-.auction__lot {
-  color: #000;
-  flex: 0 1 26.8703898841%;
-}
-.auction__nav {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.auction__nav img {
-  margin: 0 2.5px;
-}
-.auction__button2 {
-  margin: 0 30px;
-  width: 100px;
-  height: 100px;
-  background: transparent;
-  background: url("../img/lots/circle_btn@4x.jpg") center/cover no-repeat;
-  font-family: "PF Din Text Cond Pro";
-  font-size: 21px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-.auction__button2 a {
-  color: #000;
-}
+  text-align: center; }
+  .auction__lots-wp {
+    width: 949px;
+    overflow: hidden; }
+  .auction__lots {
+    width: 1898px;
+    position: relative;
+    left: 0;
+    transition: left ease 0.5s; }
+  .auction__subtitle {
+    padding-top: 65px; }
+  .auction__title {
+    padding-top: 27px;
+    color: #000; }
+  .auction__border {
+    padding-top: 21px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center; }
+    .auction__border div:nth-child(3) {
+      flex: 0 1 15.8%; }
+    .auction__border .line {
+      flex: 0 1 35.3%;
+      height: 1px;
+      background-color: #bb9c66; }
+  .auction__lots {
+    padding-left: 22px;
+    padding-top: 49px;
+    display: flex;
+    justify-content: space-between; }
+  .auction__lot {
+    color: #000;
+    flex: 0 1 13.435194942%; }
+  .auction__nav {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .auction__nav img {
+      margin: 0 2.5px; }
+  .auction__button2 {
+    margin: 0 30px;
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    background: url("../img/lots/circle_btn@4x.jpg") center/cover no-repeat;
+    font-family: "PF Din Text Cond Pro";
+    font-size: 21px;
+    font-weight: 500;
+    text-transform: uppercase; }
+    .auction__button2 a {
+      color: #000; }
 
 .lot__photo {
   height: 255px;
   border: 2px solid #bb9c66;
-  position: relative;
-}
+  position: relative; }
 .lot__figure {
   position: absolute;
   z-index: 2;
   bottom: -35px;
   left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-}
+  transform: translateX(-50%) rotate(45deg); }
 .lot__name {
+  height: 100px;
   padding-top: 30px;
   font-family: "PF Din Text Cond Pro";
   font-size: 21px;
@@ -194,19 +177,18 @@ body, a {
   line-height: 25px;
   text-transform: uppercase;
   position: relative;
-  z-index: 3;
-}
+  z-index: 3; }
 .lot__price {
   margin-top: 30px;
   height: 100px;
-  background-image: url(../img/lots/bg-lot-1.png);
   color: #1c242a;
   font-family: "Bravo RG";
   font-size: 50px;
   font-weight: 400;
   text-align: center;
-  line-height: 100px;
-}
+  line-height: 100px; }
+  .lot__price span {
+    font-size: 14px; }
 .lot__button {
   margin-top: 24px;
   width: 203px;
@@ -215,8 +197,7 @@ body, a {
   font-family: "PF Din Text Cond Pro";
   font-size: 21px;
   font-weight: 500;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
 .items {
   margin-top: 63px;
@@ -225,8 +206,14 @@ body, a {
   background: url(../img/items/items__bg.jpg) center/auto no-repeat;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-}
+  flex-wrap: wrap; }
+
+#lot__price1 {
+  background-image: url(../img/lots/bg-lot-1.png); }
+#lot__price2 {
+  background-image: url(../img/lots/bg-lot-2.png); }
+#lot__price3 {
+  background-image: url(../img/lots/bg-lot-3.png); }
 
 .item {
   margin-top: 30px;
@@ -238,20 +225,17 @@ body, a {
   background-image: url(../img/items/bg1.png);
   background-color: #383b3d;
   padding-top: 24px;
-  position: relative;
-}
-.item__name {
-  padding-top: 30px;
-  color: #bb9c66;
-  font-family: "PF Din Text Cond Pro";
-  font-size: 21px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 2.1px;
-}
-.item__decor {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-}
+  position: relative; }
+  .item__name {
+    padding-top: 30px;
+    color: #bb9c66;
+    font-family: "PF Din Text Cond Pro";
+    font-size: 21px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2.1px; }
+  .item__decor {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%); }
