@@ -6,7 +6,7 @@ let lots = document.getElementById('lots');
 
 function buttonRight() {
     left = left - 317;
-    if(left < -951) {
+    if(left < -951 - 951) {
         left = 0;
     }
     lots.style.left = left +'px';
@@ -15,7 +15,7 @@ function buttonRight() {
 function buttonLeft () {
     left = left + 317;
     if(left > 0) {
-        left = -951;
+        left = -951 -951;
     }
     lots.style.left = left +'px';
 }

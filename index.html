@@ -40,7 +40,7 @@
             <div class="container">
                 <div class="auction__wp">
                     <h3 class="auction__subtitle subtitle">Популярные</h3>
-                    <h2 class="auction__title title">Лоты под аукцион</h2>
+                    <h2 class="auction__title title title--black">Лоты под аукцион</h2>
                     <div class="auction__border">
                         <div class="line"></div>
                         <img src="img/border/bd-1.png" alt="#">
@@ -50,78 +50,160 @@
                         <img src="img/border/bd-3.png" alt="#">
                         <div class="line"></div>
                     </div>
-                    <div class="auction__lots-wp">
-                        <div id="lots" class="auction__lots">
-                            <div id="lot1" class="auction__lot lot">
-                                <div class="lot__photo">
-                                    <img src="img/lots/lot1.png" alt="#">
-                                    <div class="lot__figure figure"></div>
+
+                    <div class="auction__lots-wrapper">
+                        <button id="button-left" class="auction__button"><img src="img/lots/arrowL.png" alt="#"></button>
+                        <button id="button-right" class="auction__button"><img src="img/lots/arrowR.png" alt="#"></button>
+                        <div class="auction__lots-wp">
+                            <div id="lots" class="auction__lots">
+                                <div class="auction__lot lot">
+                                    <div class="lot__photo">
+                                        <img src="img/lots/lot1.png" alt="#">
+                                        <div class="lot__figure figure"></div>
+                                    </div>
+                                    <div class="lot__name">Arnold & Son Worldtimer discovery of antarctica</div>
+                                    <div class="lot__price price1--bg"><p>18 999 203<span>₽</span></p></div>
+                                    <button class="lot__button button">Поднять ставку</button>
                                 </div>
-                                <div class="lot__name">Arnold & Son Worldtimer discovery of antarctica</div>
-                                <div id="lot__price1" class="lot__price"><p>18 999 203<span>₽</span></p></div>
-                                <button class="lot__button button">Поднять ставку</button>
-                            </div>
-                            <div id="lot2" class="auction__lot lot">
-                                <div class="lot__photo">
-                                    <img src="img/lots/lot2.png" alt="#">
-                                    <div class="lot__figure figure"></div>
+                                <div class="auction__lot lot">
+                                    <div class="lot__photo">
+                                        <img src="img/lots/lot2.png" alt="#">
+                                        <div class="lot__figure figure"></div>
+                                    </div>
+                                    <div class="lot__name">Chateau Lafite 1949</div>
+                                    <div class="lot__price price2--bg"><p>245 050<span>₽</span></p></div>
+                                    <button class="lot__button button">Поднять ставку</button>
                                 </div>
-                                <div class="lot__name">Chateau Lafite 1949</div>
-                                <div id="lot__price2" class="lot__price"><p>245 050<span>₽</span></p></div>
-                                <button class="lot__button button">Поднять ставку</button>
-                            </div>
-                            <div id="lot3" class="auction__lot lot">
-                                <div class="lot__photo">
-                                    <img src="img/lots/lot3.png" alt="#">
-                                    <div class="lot__figure figure"></div>
+                                <div class="auction__lot lot">
+                                    <div class="lot__photo">
+                                        <img src="img/lots/lot3.png" alt="#">
+                                        <div class="lot__figure figure"></div>
+                                    </div>
+                                    <div class="lot__name">Rolex Paul Newman<br>Daytona</div>
+                                    <div class="lot__price price3--bg"><p>3 245 000<span>₽</span></p></div>
+                                    <button class="lot__button button">Поднять ставку</button>
                                 </div>
-                                <div class="lot__name">Rolex Paul Newman<br>Daytona</div>
-                                <div id="lot__price3" class="lot__price"><p>3 245 000<span>₽</span></p></div>
-                                <button class="lot__button button">Поднять ставку</button>
-                            </div>
-                            <div id="lot1" class="auction__lot lot">
-                                <div class="lot__photo">
-                                    <img src="img/lots/lot1.png" alt="#">
-                                    <div class="lot__figure figure"></div>
+                                <div class="auction__lot lot">
+                                    <div class="lot__photo">
+                                        <img src="img/lots/lot1.png" alt="#">
+                                        <div class="lot__figure figure"></div>
+                                    </div>
+                                    <div class="lot__name">Arnold & Son Worldtimer discovery of antarctica</div>
+                                    <div class="lot__price price1--bg"><p>18 999 203<span>₽</span></p></div>
+                                    <button class="lot__button button">Поднять ставку</button>
                                 </div>
-                                <div class="lot__name">Arnold & Son Worldtimer discovery of antarctica</div>
-                                <div id="lot__price1" class="lot__price"><p>18 999 203<span>₽</span></p></div>
-                                <button class="lot__button button">Поднять ставку</button>
-                            </div>
-                            <div id="lot2" class="auction__lot lot">
-                                <div class="lot__photo">
-                                    <img src="img/lots/lot2.png" alt="#">
-                                    <div class="lot__figure figure"></div>
+                                <div class="auction__lot lot">
+                                    <div class="lot__photo">
+                                        <img src="img/lots/lot2.png" alt="#">
+                                        <div class="lot__figure figure"></div>
+                                    </div>
+                                    <div class="lot__name">Chateau Lafite 1949</div>
+                                    <div class="lot__price price2--bg"><p>245 050<span>₽</span></p></div>
+                                    <button class="lot__button button">Поднять ставку</button>
                                 </div>
-                                <div class="lot__name">Chateau Lafite 1949</div>
-                                <div id="lot__price2" class="lot__price"><p>245 050<span>₽</span></p></div>
-                                <button class="lot__button button">Поднять ставку</button>
-                            </div>
-                            <div id="lot3" class="auction__lot lot">
-                                <div class="lot__photo">
-                                    <img src="img/lots/lot3.png" alt="#">
-                                    <div class="lot__figure figure"></div>
+                                <div class="auction__lot lot">
+                                    <div class="lot__photo">
+                                        <img src="img/lots/lot3.png" alt="#">
+                                        <div class="lot__figure figure"></div>
+                                    </div>
+                                    <div class="lot__name">Rolex Paul Newman<br>Daytona</div>
+                                    <div class="lot__price price3--bg"><p>3 245 000<span>₽</span></p></div>
+                                    <button class="lot__button button">Поднять ставку</button>
                                 </div>
-                                <div class="lot__name">Rolex Paul Newman<br>Daytona</div>
-                                <div id="lot__price3" class="lot__price"><p>3 245 000<span>₽</span></p></div>
-                                <button class="lot__button button">Поднять ставку</button>
+                                <div class="auction__lot lot">
+                                    <div class="lot__photo">
+                                        <img src="img/lots/lot1.png" alt="#">
+                                        <div class="lot__figure figure"></div>
+                                    </div>
+                                    <div class="lot__name">Arnold & Son Worldtimer discovery of antarctica</div>
+                                    <div class="lot__price price1--bg"><p>18 999 203<span>₽</span></p></div>
+                                    <button class="lot__button button">Поднять ставку</button>
+                                </div>
+                                <div class="auction__lot lot">
+                                    <div class="lot__photo">
+                                        <img src="img/lots/lot2.png" alt="#">
+                                        <div class="lot__figure figure"></div>
+                                    </div>
+                                    <div class="lot__name">Chateau Lafite 1949</div>
+                                    <div class="lot__price price2--bg"><p>245 050<span>₽</span></p></div>
+                                    <button class="lot__button button">Поднять ставку</button>
+                                </div>
+                                <div class="auction__lot lot">
+                                    <div class="lot__photo">
+                                        <img src="img/lots/lot3.png" alt="#">
+                                        <div class="lot__figure figure"></div>
+                                    </div>
+                                    <div class="lot__name">Rolex Paul Newman<br>Daytona</div>
+                                    <div class="lot__price price3--bg"><p>3 245 000<span>₽</span></p></div>
+                                    <button class="lot__button button">Поднять ставку</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="auction__nav">
-                            <button id="button-left" class="auction__button"><img src="img/lots/left.png" alt="#"></button>
-                            <img src="img/lots/circle.png" alt="#">
-                            <button class="auction__button2"><a href="#items">Все лоты</a></button>
-                            <img src="img/lots/circle.png" alt="#">
-                            <button id="button-right" class="auction__button"><img src="img/lots/right.png" alt="#"></button>
                         </div>
                     </div>
                 </div>
-                <div class="items" id="items">
-                    <a href="#" class="item">
-                        <div class="item__icon" ><img src="img/items/item1.png" width="75" height="75" alt="#"></div>
+            </div>
+        </div>
+        <div class="items__all">
+            <div class="container">
+                <div class="auction__border">
+                    <div class="line"></div>
+                    <img src="img/border/bd-1.png" alt="#">
+                    <div>
+                        <img src="img/border/bd-2.png" alt="#">
+                    </div>
+                    <img src="img/border/bd-3.png" alt="#">
+                    <div class="line"></div>
+                </div>
+                <h2 class="items__title title title--black">Все лоты</h2>
+                <div class="items__wp">
+                    <a href="##" id="item1" class="item">
+                        <img class="item__icon" src="img/items/icon1.png" width="75" height="74" alt="#">
                         <div class="item__name">Часы</div>
-                        <div class="item__decor"><img src="img/items/item__decor@2x.png" width="100" height="22"  alt="#"></div>
                     </a>
+                    <div class="items__decor"></div>
+                    <a href="##" id="item2" class="item">
+                        <img class="item__icon" src="img/items/icon2.png" width="75" height="74" alt="#">
+                        <div class="item__name">Ювелирные<br>Изделия</div>
+                    </a>
+                    <div class="items__decor"></div>
+                    <a href="##" id="item3" class="item">
+                        <img class="item__icon" src="img/items/icon3.png" width="75" height="74" alt="#">
+                        <div class="item__name">Hi-Tech</div>
+                    </a>
+                    <!-- <div>
+                        <div class="items__decor"></div>
+                        <div class="items__decor"></div>
+                        <div class="items__decor"></div>
+                    </div> -->
+                    <a href="##" id="item4" class="item">
+                        <img class="item__icon" src="img/items/icon4.png" width="75" height="74" alt="#">
+                        <div class="item__name">Одежда и обувь</div>
+                    </a>
+                    <div class="items__decor"></div>
+                    <a href="##" id="item5" class="item">
+                        <img class="item__icon" src="img/items/icon5.png" width="75" height="74" alt="#">
+                        <div class="item__name">Предметы<br>искусства</div>
+                    </a>
+                    <div class="items__decor"></div>
+                    <a href="##" id="item6" class="item">
+                        <img class="item__icon" src="img/items/icon6.png" width="75" height="74" alt="#">
+                        <div class="item__name">АЛкоголь и еда</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <div class="container">
+                <div class="info__wp">
+                    <img class="info__decor" src="img/info__decor.png" alt="">
+                    <div class="info__text">
+                        <p>Мы рады приветствовать вас на уникальном аукционе LuxTrader, здесь вы сможете найти достойные для себя лоты. Аукцион по продаже недвижимости во многих развитых странах являюется основным инструментом купли-продажи коммерческой, жилой, и муниципальной недвижимости, в том числе квартир. Общий объем сделок в мире на аукционах по продаже недвижимости варьируется от 30% до 80%. Для России аукцион недвижимости является относительно новым и обретает все большую популярность.
+                        </p><br>
+                        <p>Так же рады приветствовать вас на уникальном Лакшери аукционе, здесь вы сможете найти достойные для себя лоты. Аукцион по продаже недвижимости во многих развитых странах являюется основным инструментом купли-продажи коммерческой, жилой, и муниципальной недвижимости, в том числе квартир. Общий объем сделок в мире на аукционах по продаже недвижимости варьируется от 30% до 80%. Для России аукцион недвижимости является относительно новым и обретает все большую популярность.
+                        </p><br>
+                        <p>Муниципальной недвижимости, в том числе квартир. Общий объем сделок в мире на аукционах по продаже недвижимости варьируется от 30% до 80%.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

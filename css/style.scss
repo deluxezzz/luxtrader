@@ -1,21 +1,21 @@
 @import url("nullstyle.css");
 @font-face {
 	font-family: "Bravo RG";
-	src: url('fonts/ofont.ru_BravoRG.eot');
+	src: url('../fonts/ofont.ru_BravoRG.eot');
 	src: url('../fonts/ofont.ru_BravoRG.woff') format('woff'), url('../fonts/ofont.ru_BravoRG.ttf') format('truetype'), url('../fonts/ofont.ru_BravoRG.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'PF Din Text Cond Pro';
-	src: url('fonts/ofont.ru_PF Din Text Cond Pro.eot');
+	src: url('../fonts/ofont.ru_PF Din Text Cond Pro.eot');
 	src: local('☺'), url('../fonts/ofont.ru_PF Din Text Cond Pro.woff') format('woff'), url('../fonts/ofont.ru_PF Din Text Cond Pro.ttf') format('truetype'), url('../fonts/ofont.ru_PF Din Text Cond Pro.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 body, a {
-    color: #ffffff;
+    color: #000;
 }
 
 .container {
@@ -37,9 +37,11 @@ body, a {
         padding-bottom: 12px;
     }
     &__link {
+        color: #fff;
         margin: 0 14px;
     }
     &__region {
+        color: #fff;
         height: 18px;
         display: flex;
         align-items: center;
@@ -57,14 +59,20 @@ body, a {
 }
 
 .title {
+    color: #fff;
     font-family: "PF Din Text Cond Pro";
     font-size: 35px;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 5.25px;
+    text-align: center;
+    &--black {
+        color: #000;
+    }
 }
 
 .text {
+    color: #fff;
     font-family: "PT Sans";
     font-size: 15px;
     font-weight: 400;
@@ -78,7 +86,14 @@ body, a {
     border-image: linear-gradient(#c3a775 , #8d642e);
     border-image-slice: 1;
     background: transparent;
-
+    &:hover {
+        background-color: #bb9c66;
+        transition: background-color ease 0.3s;  
+    }
+    &:active {
+        background-color:#8d642e;
+        transition: background-color ease 0.3s;  
+    }
 }
 
 
@@ -111,6 +126,14 @@ body, a {
         font-size: 15px;
         font-weight: 400;
         text-transform: uppercase;
+        &:hover {
+            background-color: #8d642e;
+            transition: background-color ease 0.2s;
+        }
+        &:active {
+            background-color:#775427;
+            transition: background-color ease 0.3s;  
+        }
     }
     &__figure {
         position: absolute;
@@ -135,7 +158,7 @@ body, a {
         overflow: hidden;
     }
     &__lots {
-        width: 949px + 949px;
+        width: 949px + 949px + 949px;
         position: relative;
         left: 0;
 
@@ -149,6 +172,7 @@ body, a {
         color: #000;
     }
     &__border {
+        text-align: center;
         padding-top: 21px;
         display: flex;
         justify-content: center;
@@ -171,7 +195,7 @@ body, a {
     }
     &__lot {
         color: #000;
-        flex: 0 1 255px*100%/(949px + 949px);
+        flex: 0 1 255px*100%/(949px + 949px + 949px);
     }
     &__nav {
         margin-top: 50px;
@@ -183,24 +207,6 @@ body, a {
             margin: 0 2.5px;
         }
     }
-    &__button2 {
-        margin: 0 30px;
-        width: 100px;
-        height: 100px;
-        // border: 3px solid #bb9c66;
-        // border-radius: 50px;
-        background: transparent;
-
-        background: url('../img/lots/circle_btn@4x.jpg') center / cover no-repeat;
-        font-family: "PF Din Text Cond Pro";
-        font-size: 21px;
-        font-weight: 500;
-        text-transform: uppercase;
-        
-        & a {
-            color: #000;
-        }
-    }
 }
 
 .lot {
@@ -208,6 +214,11 @@ body, a {
         height: 255px;
         border: 2px solid #bb9c66;
         position: relative;
+        cursor: pointer;
+        &:hover {
+            background-color: #bb9c66;
+            transition: all ease 0.3s;  
+        }
     }
     &__figure {
         position: absolute;
@@ -240,9 +251,7 @@ body, a {
             font-size: 14px;
         }
     }
-    
     &__button {
-        
         margin-top: 24px;
         width: 203px;
         height: 50px;
@@ -253,41 +262,72 @@ body, a {
         text-transform: uppercase;
     }
 }
-.items {
-    margin-top: 63px;
-    width: 100%;
-    max-height: 924px;
-    background: url(../img/items/items__bg.jpg) center / auto no-repeat;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
 
-#lot__price {
-    &1 {
+.price {
+    &1--bg {
         background-image: url(../img/lots/bg-lot-1.png);
     }
-    &2 {
+    &2--bg {
         background-image: url(../img/lots/bg-lot-2.png);
     }
-    &3 {
+    &3--bg {
         background-image: url(../img/lots/bg-lot-3.png);
     }
 }
 
-
+.auction__lots-wrapper {
+    position: relative;
+}
+#button-left {
+    position: absolute;
+    top: 50%;
+    left: -65px;
+    transform: translateY(50%);
+}
+#button-right {
+    position: absolute;
+    top: 50%;
+    right: -65px;
+    transform: translateY(50%);
+}
+.items {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 50px;
+    &__wp {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__title {
+        padding: 40px 0;
+    }
+    &__decor {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: #bb9c66;
+    }
+}
 .item {
-    margin-top: 30px;
-
-    flex: 0 1 250px*100%/949px;
+    margin-bottom: 30px;
+    border-radius: 100%;
     width: 250px;
     height: 250px;
-    border-radius: 125px;
+    background-color: #443c3c;
     background-blend-mode: multiply;
-    background-image: url(../img/items/bg1.png);
-    background-color: #383b3d;
-    padding-top: 24px;
-    position: relative;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 25px;
+    &:hover {
+        background-color: #3a3333; 
+        transition: background-color ease 0.3s;   
+    }
+    &__icon {
+        
+    }
     &__name {
         padding-top: 30px;
         color: #bb9c66;
@@ -297,10 +337,45 @@ body, a {
         text-transform: uppercase;
         letter-spacing: 2.1px;
     }
+}
+#item {
+    &1 {
+    background-image: url(../img/items/bg1.png);
+    }
+    &2 {
+    background-image: url(../img/items/bg2.png);
+    }
+    &3 {
+    background-image: url(../img/items/bg3.png);
+    }
+    &4 {
+    background-image: url(../img/items/bg4.png);
+    }
+    &5 {
+    background-image: url(../img/items/bg5.png);
+    }
+    &6 {
+    background-image: url(../img/items/bg6.png);
+    }
+}
+
+.info {
+    padding-top: 100px;
+    width: 100%;
+    height: 100%;
+    &__wp {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
     &__decor {
-        position: absolute;
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
+    }
+    &__text {
+        padding-left: 40px;
+        color: #333333;
+        font-family: "PT Sans";
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
     }
 }
