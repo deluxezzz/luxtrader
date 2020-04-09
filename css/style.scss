@@ -441,25 +441,39 @@ body, a {
     &__title {
         padding-top: 25px;
     }
+    &__slider-wp {
+    }
     &__slider {
         display: flex;
 
     }
     &__portrait {
+        padding-left: 15px;
 
     }
     &__info {
-        padding: 60px 0 0 60px;
+        width: 783px;
+        margin: 60px 0 0 60px;
+        position: relative;
+    }
+    &__info-wp {
     }
     &__text {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
         font-family: "PT Sans";
         font-size: 25px;
         font-style: italic;
     }
     &__author {
-        
         font-family: "PT Sans";
         line-height: 20px;
+        position: absolute;
+        top: 70px;
+        left: 0;
     }
     &__btn {
         display: flex;
@@ -480,5 +494,37 @@ body, a {
     }
     &__button {
         padding: 0 50px;
+    }
+}
+
+#quote1 {
+    display: block;
+}
+#quote2, #quote3 {
+    display: none;
+}
+
+.news {
+    padding-top: 75px;
+    &__wp {
+        display: flex;
+    }
+    &__date {
+        color: #bb9c66;
+        font-family: "PT Sans - Regular";
+        font-size: 12px;
+        font-weight: 400;
+    }
+    &__title {
+        font-family: "PT Sans";
+        font-weight: 700;
+        text-decoration: underline;
+    }
+    &__text {
+        color: #333333;
+        font-family: "PT Sans";
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
     }
 }

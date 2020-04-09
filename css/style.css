@@ -355,15 +355,26 @@ body, a {
     padding-top: 25px; }
   .quote__slider {
     display: flex; }
+  .quote__portrait {
+    padding-left: 15px; }
   .quote__info {
-    padding: 60px 0 0 60px; }
+    width: 783px;
+    margin: 60px 0 0 60px;
+    position: relative; }
   .quote__text {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     font-family: "PT Sans";
     font-size: 25px;
     font-style: italic; }
   .quote__author {
     font-family: "PT Sans";
-    line-height: 20px; }
+    line-height: 20px;
+    position: absolute;
+    top: 70px;
+    left: 0; }
   .quote__btn {
     display: flex;
     align-items: center;
@@ -380,3 +391,29 @@ body, a {
     border: 1px solid #bb9c66; }
   .quote__button {
     padding: 0 50px; }
+
+#quote1 {
+  display: block; }
+
+#quote2, #quote3 {
+  display: none; }
+
+.news {
+  padding-top: 75px; }
+  .news__wp {
+    display: flex; }
+  .news__date {
+    color: #bb9c66;
+    font-family: "PT Sans - Regular";
+    font-size: 12px;
+    font-weight: 400; }
+  .news__title {
+    font-family: "PT Sans";
+    font-weight: 700;
+    text-decoration: underline; }
+  .news__text {
+    color: #333333;
+    font-family: "PT Sans";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px; }

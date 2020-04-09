@@ -19,3 +19,26 @@ function buttonLeft () {
     }
     lots.style.left = left +'px';
 }
+
+// // let quote1 = document.getElementById('quote1');
+// let quote2 = document.getElementById('quote2');
+// let quote3 = document.getElementById('quote3');
+
+// alert(quote2);
+
+// quote__button.onclick = function() {
+//     if (quote1.style.display == "block") {
+//         quote1.style.display = "none";
+//         quote2.style.display = "block";
+//         quote3.style.display = "none";
+//     } else if (quote2.style.display== "block") {
+//         quote1.style.display = "none";
+//         quote2.style.display = "none";
+//         quote3.style.display = "block";
+//     } else if (quote3.style.display == "block") {
+//         quote1.style.display = "block";
+//         quote2.style.display = "none";
+//         quote3.style.display = "none";
+//     } else {
+//     }
+// }
