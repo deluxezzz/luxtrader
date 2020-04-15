@@ -20,6 +20,9 @@
 	font-weight: normal;
 	font-style: normal;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body, a {
     color: #000;
@@ -164,6 +167,8 @@ body, a {
 
 .auction {
     text-align: center;
+
+    padding-top: 55px;
     &__lots-wp {
         width: 949px;
         overflow: hidden;
@@ -176,7 +181,7 @@ body, a {
         transition: left ease 0.5s;
     }
     &__subtitle {
-        padding-top: 65px;
+        padding-top: 10px;
     }
     &__title {
         padding-top: 27px;
@@ -378,8 +383,6 @@ body, a {
         justify-content: space-between;
         flex-wrap: nowrap;
     }
-    &__decor {
-    }
     &__text {
         padding-top: 12px;
         padding-left: 40px;
@@ -456,18 +459,6 @@ body, a {
         margin: 60px 0 0 60px;
         position: relative;
     }
-    &__info-wp {
-    }
-    &__text {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        font-family: "PT Sans";
-        font-size: 25px;
-        font-style: italic;
-    }
     &__author {
         font-family: "PT Sans";
         line-height: 20px;
@@ -494,14 +485,28 @@ body, a {
     }
     &__button {
         padding: 0 50px;
-    }
-}
 
-#quote1 {
-    display: block;
-}
-#quote2, #quote3 {
-    display: none;
+        & img:hover {
+            border-radius: 100%;
+            background-color: rgb(247, 243, 239);
+
+            transition: background-color ease 0.2s;
+        }
+    }
+    &__text {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        font-family: "PT Sans";
+        font-size: 25px;
+        font-style: italic;
+        &--active {
+            display: block;
+        }
+    }
+    
 }
 
 .news {
@@ -551,15 +556,119 @@ body, a {
         line-height: 23px;
     }
     &__subscribe {
+        padding-top: 57px;
         width: 100%;
         height: 100%;
-        display: flex;
-        justify-content: space-between;
     }
-    &-bottom {
+}
+.subscribe {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    &__text {
         flex: 0 1 45%;
+        color: #333333;
+        font-family: "PT Sans";
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 23px;
     }
     &__form {
+        margin-top: 23px;
         flex: 0 1 45%;
+        width: 400px;
+        height: 50px;
+        border: 3px solid #bb9c66;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__input {
+        padding-left: 26px;
+        height: 100%;
+        color: #4f4f4f;
+        font-family: "PT Sans";
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+    }
+    &__btn {
+        margin-right: 4px;
+        vertical-align: middle;
+        width: 78px;
+        height: 32px;
+        background: url(../img/news__btn.png) no-repeat;
+        cursor: pointer;
+       }
+}
+
+.footer {
+    background-color: #1c242a;
+    width: 100%;
+    &__wp {
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__txt {
+        flex: 0 1 27%;
+    }
+    &__nav {
+        flex: 0 1 50%;
+    }
+    &__feedback {
+        flex: 0 1 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    &__text {
+        color: #bb9c66;
+        font-family: "PT Sans";
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 21px;
+    }
+    &__link {
+        padding-right: 10px;
+        color: #ffffff;
+        font-family: "PF Din Text Cond Pro";
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 25px;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+    }
+    &__phone {
+        color: #bb9c66;
+        font-family: "Bravo RG";
+        font-size: 40px;
+        font-weight: 300;
+        text-transform: uppercase;
+        span {
+            font-size: 24px;
+            vertical-align: text-top;
+            position: relative;
+            top: 4px;
+        }
+    }
+    &__btn {
+        width: 100%;
+        padding-left: 4px;
+        color: #bb9c66;
+        font-family: "PT Sans";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: right;
+        img {
+            position: relative;
+            top: 4px;
+            right: 4px;
+        }
+        span {
+            border-bottom: 1px dashed #bb9c66;
+        }
     }
 }

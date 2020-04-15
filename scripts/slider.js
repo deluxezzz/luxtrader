@@ -15,10 +15,32 @@ function buttonRight() {
 function buttonLeft () {
     left = left + 317;
     if(left > 0) {
-        left = -951 -951;
+        left = -951 - 951;
     }
     lots.style.left = left +'px';
 }
+
+document.querySelector('.quote__button').onclick = changeQuote;
+let quote = document.querySelectorAll('.quote__text');
+var i = 0;
+console.log(quote);
+
+function changeQuote () {
+    quote[i].classList.remove('quote__text--active');
+    i++;
+    if (i < quote.length) {
+    quote[i].classList.add('quote__text--active');
+    } else {
+        i--;
+        quote[i].classList.remove('quote__text--active');
+        i = 0;
+        quote[i].classList.add('quote__text--active');
+    }
+}
+// [0]
+// [1]
+// [2]
+
 
 // // let quote1 = document.getElementById('quote1');
 // let quote2 = document.getElementById('quote2');
