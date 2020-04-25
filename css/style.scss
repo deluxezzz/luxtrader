@@ -412,6 +412,9 @@ body, a {
 .service {
     text-align: center;
     flex: 0 1 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     &__name {
         padding-top: 38px;
@@ -670,5 +673,106 @@ body, a {
         span {
             border-bottom: 1px dashed #bb9c66;
         }
+    }
+}
+
+.header__burger {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 6;
+}
+.header__burger span {
+    position: absolute;
+    background-color: #bb9c66;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    top: 9px;
+}
+.header__burger:before,
+.header__burger:after{
+    content: '';
+    background-color: #bb9c66;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+}
+.header__burger:before{
+    top: 0;
+}
+.header__burger::after {
+    bottom: 0;
+}
+
+@media (max-width: 1200px) {
+    .auction {
+        display: none;
+    }
+    .items__all {
+        padding-top: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 0 25px;
+    }
+    .header {
+        &__burger {
+            display: block;
+        }
+        &__nav, &__region, &__user {
+            display: none;
+        }
+        &__logo {
+            margin-top: 10px;
+        }
+    }
+    .items {
+        &__wp {
+            justify-content: space-around;
+        }
+        &__decor {
+            display: none;
+        }
+        
+    }
+    .quote__text {
+        font-size: 23px;
+    }
+    .footer__phone {
+        font-size: 36px;
+    }
+    .title {
+        font-size: 31px;
+        &--small {
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+    .subtitle {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 767px) {
+    .service {
+        & img {
+            width: 150px;
+            height: 150px;
+        }
+        &__text {
+            padding: 0 4px;
+            font-size: 1em;
+        }
+    }
+    #service2 {
+        display: none;
+    }
+    .services__body {
+        justify-content: space-around;
     }
 }
