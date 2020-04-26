@@ -23,7 +23,6 @@ function buttonLeft () {
 document.querySelector('.quote__button').onclick = changeQuote;
 let quote = document.querySelectorAll('.quote__text');
 var i = 0;
-console.log(quote);
 
 function changeQuote () {
     quote[i].classList.remove('quote__text--active');
@@ -37,6 +36,14 @@ function changeQuote () {
         quote[i].classList.add('quote__text--active');
     }
 }
+
+const burger = document.querySelector('#burger');
+const mobileMenu = document.querySelector('#mobile__nav')
+burger.addEventListener("click", function(){
+    mobileMenu.classList.toggle('mobile__nav--active');
+});
+
+
 // [0]
 // [1]
 // [2]

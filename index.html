@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="wrapper">
+        
         <header id="header" class="header">
             <div class="container">
                 <div class="header__wp">
@@ -22,12 +23,19 @@
                     </nav>
                     <a href="#" class="header__region"><img src="img/globe.png" alt="#">Выбор Региона</a>
                     <a href="#" class="header__user"><img src="img/user.png" alt="#"></a>
-                    <div class="header__burger"><span></span></div>
+                    <div id="burger" class="header__burger"><span></span></div>
+                    <nav id="mobile__nav" class="mobile__nav">
+                        <a class="mobile__link" href="#header">Главная</a>
+                        <a class="mobile__link" href="#auction">Аукцион</a>
+                        <a class="mobile__link" href="#items__all">Все лоты</a>
+                        <a class="mobile__link" href="#services">Услуги</a>
+                        <a class="mobile__link" href="#footer">Контакты</a>
+                    </nav>
                 </div>
             </div>
         </header>
         <div class="main">
-            <div class="contaner">
+            <div class="container">
                 <div class="main__wp">
                     <h3 class="main__subtitle subtitle">Только эксклюзивные</h3>
                     <h1 class="main__title title title--white">Лоты под аукцион и свободную продажу</h1>
@@ -37,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <!-- Слайдер с популярными лотами -->
+    <!-- Слайдер с популярными лотами -->
         <div class="auction">
             <div class="container">
                 <div class="auction__wp">
@@ -144,7 +152,7 @@
                 </div>
             </div>
         </div>
-        <!-- Все лоты -->
+    <!-- Все лоты -->
         <div id="items__all" class="items__all">
             <div class="container">
                 <div class="items__border border">
@@ -255,6 +263,7 @@
                 </div>
             </div>
         </div>
+        <!-- Цитаты -->
         <div class="quote">
             <div class="container">
                 <div class="quote__wp">
@@ -284,7 +293,6 @@
                                 </div>
                                 <p class="quote__author"><br>Марк Твен<br>1835-1910</p>
                             </div>
-                            
                         </div>
                     </div>
                     <div class="quote__btn">

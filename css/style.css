@@ -39,6 +39,7 @@ body, a {
   background-color: #1c242a;
   height: 75px;
   text-transform: uppercase;
+  overflow: hidden;
 }
 .header__wp {
   height: 75px;
@@ -112,11 +113,13 @@ body, a {
   transition: background-color ease 0.3s;
 }
 
+.main {
+  background-image: url(../img/main__bg.png);
+  background-color: #000;
+}
 .main__wp {
   height: 450px;
   width: 100%;
-  background-image: url(../img/main__bg.png);
-  background-color: #000;
   text-align: center;
   position: relative;
 }
@@ -604,7 +607,7 @@ body, a {
   flex: 0 1 27%;
 }
 .footer__nav {
-  flex: 0 1 50%;
+  flex: 0 1 55%;
 }
 .footer__feedback {
   flex: 0 1 25%;
@@ -664,9 +667,11 @@ body, a {
 .header__burger {
   display: none;
   position: relative;
-  width: 30px;
+  z-index: 19;
+  width: 32px;
   height: 20px;
-  z-index: 6;
+  cursor: pointer;
+  padding: 0;
 }
 
 .header__burger span {
@@ -692,8 +697,40 @@ body, a {
   top: 0;
 }
 
-.header__burger::after {
+.header__burger:after {
   bottom: 0;
+}
+
+.mobile__nav {
+  display: none;
+  position: absolute;
+  z-index: 9;
+  width: 320px;
+  height: 525px;
+  background-color: #2e2515f6;
+  right: -320px;
+  top: 0;
+  padding: 77px 25px 0 30px;
+  transition: transform 0.5s ease;
+}
+
+.mobile__nav--active {
+  transform: translateX(-100%);
+}
+
+.mobile__link {
+  color: #bb9c66;
+  font-size: 30px;
+  line-height: 60px;
+}
+
+.mobile__link:hover {
+  color: #fff;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {
@@ -703,6 +740,11 @@ body, a {
 
   .items__all {
     padding-top: 30px;
+  }
+
+  .mobile__nav {
+    display: flex;
+    flex-direction: column;
   }
 }
 @media (max-width: 992px) {

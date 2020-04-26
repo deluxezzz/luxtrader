@@ -32,11 +32,14 @@ body, a {
     max-width: 979px;
     padding: 0 15px;
     margin: 0 auto;
+    
 }
 .header {
     background-color: #1c242a;
     height: 75px;
     text-transform: uppercase;
+
+    overflow: hidden;
     &__wp {
         height: 75px;
         display: flex;
@@ -112,11 +115,12 @@ body, a {
 
 
 .main {
+    background-image: url(../img/main__bg.png); 
+    background-color: #000;
     &__wp {
     height: 450px;
     width: 100%;
-    background-image: url(../img/main__bg.png); 
-    background-color: #000;
+
     text-align: center;
     position: relative;
     }
@@ -618,7 +622,7 @@ body, a {
         flex: 0 1 27%;
     }
     &__nav {
-        flex: 0 1 50%;
+        flex: 0 1 55%;
     }
     &__feedback {
         flex: 0 1 25%;
@@ -675,13 +679,15 @@ body, a {
         }
     }
 }
-
+// Адаптация под различные устройства
 .header__burger {
     display: none;
     position: relative;
-    width: 30px;
+    z-index: 19;
+    width: 32px;
     height: 20px;
-    z-index: 6;
+    cursor: pointer;
+    padding: 0;
 }
 .header__burger span {
     position: absolute;
@@ -703,16 +709,48 @@ body, a {
 .header__burger:before{
     top: 0;
 }
-.header__burger::after {
+.header__burger:after {
     bottom: 0;
 }
 
+.mobile__nav {
+    display: none;
+    position: absolute;
+    z-index: 9;
+    width: 320px;
+    height: 525px;
+    background-color: #2e2515f6;
+    right: -320px;
+    top: 0;
+    padding: 77px 25px 0 30px;
+
+    transition: transform 0.5s ease;
+}
+.mobile__nav--active {
+    transform: translateX(-100%);
+}
+.mobile__link {
+    color: #bb9c66;
+    font-size: 30px;
+    line-height: 60px;
+}
+.mobile__link:hover {
+    color: #fff;
+}
+.wrapper {
+    position: relative;
+    overflow: hidden;
+}
 @media (max-width: 1200px) {
     .auction {
         display: none;
     }
     .items__all {
         padding-top: 30px;
+    }
+    .mobile__nav {
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -738,7 +776,6 @@ body, a {
         &__decor {
             display: none;
         }
-        
     }
     .quote__text {
         font-size: 23px;
