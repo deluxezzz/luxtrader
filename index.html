@@ -9,7 +9,15 @@
 </head>
 <body>
     <div class="wrapper">
-        
+        <!--Мобильное меню-->
+        <nav id="mobile__nav" class="mobile__nav">
+            <a class="mobile__link" href="#header">Главная</a>
+            <a class="mobile__link" href="#auction">Аукцион</a>
+            <a class="mobile__link" href="#items__all">Все лоты</a>
+            <a class="mobile__link" href="#services">Услуги</a>
+            <a class="mobile__link" href="#footer">Контакты</a>
+        </nav>
+        <!-- Верхняя полоска -->
         <header id="header" class="header">
             <div class="container">
                 <div class="header__wp">
@@ -23,17 +31,19 @@
                     </nav>
                     <a href="#" class="header__region"><img src="img/globe.png" alt="#">Выбор Региона</a>
                     <a href="#" class="header__user"><img src="img/user.png" alt="#"></a>
+                    <!--Всплывающее меню пользователя -->
+                    <div class="user-menu">
+                        <a href="#" class="user-menu__link"><img src="img/user-menu/2.png" alt="">Личный кабинет</a>
+                        <a href="#" class="user-menu__link"><img src="img/user-menu/3.png" alt="">Мои ставки</a>
+                        <a href="#" class="user-menu__link"><img src="img/user-menu/4.png" alt="">Мои лоты</a>
+                    </div>
+                    <!--Бургер-->
                     <div id="burger" class="header__burger"><span></span></div>
-                    <nav id="mobile__nav" class="mobile__nav">
-                        <a class="mobile__link" href="#header">Главная</a>
-                        <a class="mobile__link" href="#auction">Аукцион</a>
-                        <a class="mobile__link" href="#items__all">Все лоты</a>
-                        <a class="mobile__link" href="#services">Услуги</a>
-                        <a class="mobile__link" href="#footer">Контакты</a>
-                    </nav>
+                    
                 </div>
             </div>
         </header>
+        <!-- Заглавная страница -->
         <div class="main">
             <div class="container">
                 <div class="main__wp">
@@ -45,7 +55,7 @@
                 </div>
             </div>
         </div>
-    <!-- Слайдер с популярными лотами -->
+        <!-- Слайдер с популярными лотами -->
         <div class="auction">
             <div class="container">
                 <div class="auction__wp">

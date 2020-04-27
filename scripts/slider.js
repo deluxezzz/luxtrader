@@ -39,10 +39,15 @@ function changeQuote () {
 
 const burger = document.querySelector('#burger');
 const mobileMenu = document.querySelector('#mobile__nav')
-burger.addEventListener("click", function(){
+burger.addEventListener('click', function(){
     mobileMenu.classList.toggle('mobile__nav--active');
 });
 
+const userButton = document.querySelector('.header__user');
+const userMenu = document.querySelector('.user-menu')
+userButton.addEventListener ('click', function (){
+    userMenu.classList.toggle('user-menu--active');
+});
 
 // [0]
 // [1]

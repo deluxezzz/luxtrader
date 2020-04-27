@@ -23,47 +23,21 @@
 html {
     scroll-behavior: smooth;
 }
-
 body, a {
     color: #000;
 }
-
+.wrapper {
+    position: relative;
+    overflow: hidden;
+}
 .container {
+
     max-width: 979px;
     padding: 0 15px;
     margin: 0 auto;
-    
-}
-.header {
-    background-color: #1c242a;
-    height: 75px;
-    text-transform: uppercase;
 
-    overflow: hidden;
-    &__wp {
-        height: 75px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    &__logo {
-        padding-bottom: 12px;
-    }
-    &__link {
-        color: #fff;
-        margin: 0 14px;
-    }
-    &__region {
-        color: #fff;
-        height: 18px;
-        display: flex;
-        align-items: center;
-        img {
-            margin-right: 11px;
-        }   
-    }
+    position: relative;
 }
-
 .subtitle {
     text-align: center;
     color: #bb9c66;
@@ -95,6 +69,132 @@ body, a {
     font-weight: 400;
     line-height: 25px;
 }
+.header {
+    background-color: #1c242a;
+    height: 75px;
+    text-transform: uppercase;
+    font-family: "PF Din Text Cond Pro";
+    font-size: 16px;
+    font-weight: 400;
+    &__wp {
+        height: 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        padding-bottom: 12px;
+    }
+    &__nav {
+        flex: 0 1 60%;
+        padding-left: 70px;
+    }
+    &__link {
+        color: #fff;
+        margin: 0 14px;
+    }
+    &__region {
+        color: #fff;
+        height: 18px;
+        display: flex;
+        align-items: center;
+        img {
+            margin-right: 11px;
+        }   
+    }
+    &__burger {
+        display: none;
+        position: relative;
+        z-index: 19;
+        width: 32px;
+        height: 20px;
+        cursor: pointer;
+        padding: 0;
+        span {
+            position: absolute;
+            background-color: #bb9c66;
+            width: 100%;
+            height: 3px;
+            left: 0;
+            top: 9px;
+        }
+        &:after,
+        &:before {
+            content: '';
+            background-color: #bb9c66;
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            left: 0;
+        }
+        &:before{
+            top: 0;
+        }
+        &:after {
+            bottom: 0;
+        }
+    }
+}
+.user-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 9;
+    top: 78px;
+    right: 0;
+    background-color: #1c242a;
+    padding: 20px 20px 20px 40px;
+    align-items: baseline;
+    opacity: 0;
+    visibility: hidden;
+
+    &__link {
+        display: flex;
+        color: #fff;
+        line-height: 30px;
+        text-transform: none;
+        position: relative;
+
+        & img {
+            flex: 0 1 10%;
+            object-fit: none;
+            position: absolute;
+            top: 5px;
+            left: -22px;
+        }
+    }
+}
+.user-menu--active {
+    opacity: 1;
+    visibility: visible;
+}
+.mobile {
+    &__nav {
+        display: none;
+        position: absolute;
+        z-index: 9;
+        width: 320px;
+        height: 525px;
+        background-color: #2e2515f6;
+        right: -320px;
+        top: 0;
+        padding: 77px 25px 0 30px;
+        transition: transform 0.5s ease;
+
+        &--active {
+            transform: translateX(-100%);
+        }
+    }
+    &__link {
+        color: #bb9c66;
+        font-size: 30px;
+        line-height: 60px;
+
+        &:hover {
+            color: rgb(247, 243, 239);
+        }
+    }
+}
 
 .button {
     color: #fff;
@@ -104,11 +204,11 @@ body, a {
     border-image-slice: 1;
     background: transparent;
     &:hover {
-        background-color: #bb9c66;
+        background-color: rgb(247, 243, 239);
         transition: background-color ease 0.3s;  
     }
     &:active {
-        background-color:#8d642e;
+        background-color:rgb(247, 243, 239);
         transition: background-color ease 0.3s;  
     }
 }
@@ -145,11 +245,11 @@ body, a {
         font-weight: 400;
         text-transform: uppercase;
         &:hover {
-            background-color: #8d642e;
+            background-color: #251a0b;;
             transition: background-color ease 0.2s;
         }
         &:active {
-            background-color:#775427;
+            background-color:#181107;
             transition: background-color ease 0.3s;  
         }
     }
@@ -341,7 +441,7 @@ body, a {
     text-align: center;
     padding-top: 25px;
     &:hover {
-        background-color: #947b7b;
+        background-color: rgb(247, 243, 239);
         transition: background-color ease 0.3s;   
     }
     &__icon {
@@ -598,6 +698,7 @@ body, a {
         font-size: 15px;
         font-weight: 400;
         line-height: 25px;
+        
     }
     &__btn {
         margin-right: 4px;
@@ -680,66 +781,12 @@ body, a {
     }
 }
 // Адаптация под различные устройства
-.header__burger {
-    display: none;
-    position: relative;
-    z-index: 19;
-    width: 32px;
-    height: 20px;
-    cursor: pointer;
-    padding: 0;
-}
-.header__burger span {
-    position: absolute;
-    background-color: #bb9c66;
-    width: 100%;
-    height: 3px;
-    left: 0;
-    top: 9px;
-}
-.header__burger:before,
-.header__burger:after{
-    content: '';
-    background-color: #bb9c66;
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    left: 0;
-}
-.header__burger:before{
-    top: 0;
-}
-.header__burger:after {
-    bottom: 0;
-}
 
-.mobile__nav {
-    display: none;
-    position: absolute;
-    z-index: 9;
-    width: 320px;
-    height: 525px;
-    background-color: #2e2515f6;
-    right: -320px;
-    top: 0;
-    padding: 77px 25px 0 30px;
 
-    transition: transform 0.5s ease;
-}
-.mobile__nav--active {
-    transform: translateX(-100%);
-}
-.mobile__link {
-    color: #bb9c66;
-    font-size: 30px;
-    line-height: 60px;
-}
-.mobile__link:hover {
-    color: #fff;
-}
-.wrapper {
-    position: relative;
-    overflow: hidden;
+@media (min-width: 993px) {
+    .user-menu__link:hover{
+        text-decoration: underline;
+    }
 }
 @media (max-width: 1200px) {
     .auction {
@@ -757,6 +804,9 @@ body, a {
 @media (max-width: 992px) {
     .container {
         padding: 0 25px;
+    }
+    .user-menu {
+        display: none;
     }
     .header {
         &__burger {
