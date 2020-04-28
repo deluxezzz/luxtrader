@@ -91,21 +91,32 @@ body, a {
   padding-bottom: 12px;
 }
 .header__nav {
-  flex: 0 1 60%;
-  padding-left: 70px;
+  flex: 0 1 auto;
 }
 .header__link {
   color: #fff;
-  margin: 0 14px;
+  margin: 0 15px;
+}
+.header__user-region {
+  display: flex;
+  align-items: center;
 }
 .header__region {
+  height: 19px;
+  line-height: 18px;
   color: #fff;
   height: 18px;
   display: flex;
   align-items: center;
+  margin-right: 10px;
 }
 .header__region img {
   margin-right: 11px;
+  margin-bottom: 3px;
+}
+.header__user {
+  display: inline-block;
+  margin-bottom: 3px;
 }
 .header__burger {
   display: none;
@@ -144,13 +155,15 @@ body, a {
   flex-direction: column;
   position: absolute;
   z-index: 9;
-  top: 78px;
+  top: 88px;
   right: 0;
   background-color: #1c242a;
-  padding: 20px 20px 20px 40px;
+  padding: 12px 20px 12px 40px;
   align-items: baseline;
+  /* Невидимое до нажатия */
   opacity: 0;
   visibility: hidden;
+  transition: all 0.3s ease;
 }
 .user-menu__link {
   display: flex;
@@ -167,9 +180,11 @@ body, a {
   left: -22px;
 }
 
+/* Класс, который добавляется при клике */
 .user-menu--active {
   opacity: 1;
   visibility: visible;
+  top: 78px;
 }
 
 .mobile__nav {
@@ -788,18 +803,12 @@ body, a {
     padding: 0 25px;
   }
 
-  .user-menu {
+  .header__region span {
     display: none;
   }
-
-  .header__burger {
-    display: block;
-  }
-  .header__nav, .header__region, .header__user {
-    display: none;
-  }
-  .header__logo {
-    margin-top: 10px;
+  .header__region img {
+    margin-right: 0;
+    margin-bottom: 3px;
   }
 
   .items__wp {
@@ -830,6 +839,20 @@ body, a {
   }
 }
 @media (max-width: 767px) {
+  .user-menu {
+    display: none;
+  }
+
+  .header__burger {
+    display: block;
+  }
+  .header__nav, .header__region, .header__user {
+    display: none;
+  }
+  .header__logo {
+    margin-top: 10px;
+  }
+
   .service img {
     width: 150px;
     height: 150px;

@@ -1,3 +1,17 @@
+//Мобильное меню при нажатии на бургер
+const burger = document.querySelector('#burger'),
+    mobileMenu = document.querySelector('#mobile__nav')
+burger.addEventListener('click', function(){
+    mobileMenu.classList.toggle('mobile__nav--active');
+});
+
+//Всплывающее меню пользователя
+const userButton = document.querySelector('.header__user'),
+    userMenu = document.querySelector('.user-menu')
+userButton.addEventListener ('click', () =>
+    userMenu.classList.toggle('user-menu--active'));
+
+// Ужасный слайдер, простите если видите это
 document.getElementById('button-left').onclick = buttonLeft;
 document.getElementById('button-right').onclick = buttonRight;
 
@@ -19,7 +33,7 @@ function buttonLeft () {
     }
     lots.style.left = left +'px';
 }
-
+//Цитаты меняются при нажатии на кнопку
 document.querySelector('.quote__button').onclick = changeQuote;
 let quote = document.querySelectorAll('.quote__text');
 var i = 0;
@@ -37,17 +51,6 @@ function changeQuote () {
     }
 }
 
-const burger = document.querySelector('#burger');
-const mobileMenu = document.querySelector('#mobile__nav')
-burger.addEventListener('click', function(){
-    mobileMenu.classList.toggle('mobile__nav--active');
-});
-
-const userButton = document.querySelector('.header__user');
-const userMenu = document.querySelector('.user-menu')
-userButton.addEventListener ('click', function (){
-    userMenu.classList.toggle('user-menu--active');
-});
 
 // [0]
 // [1]

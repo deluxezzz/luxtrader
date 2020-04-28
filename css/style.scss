@@ -86,21 +86,35 @@ body, a {
         padding-bottom: 12px;
     }
     &__nav {
-        flex: 0 1 60%;
-        padding-left: 70px;
+        flex: 0 1 auto;
     }
     &__link {
         color: #fff;
-        margin: 0 14px;
+        margin: 0 15px;
+    }
+    &__user-region {
+        display: flex;
+        align-items: center;
     }
     &__region {
+        height: 19px;
+        line-height: 18px;
         color: #fff;
         height: 18px;
         display: flex;
         align-items: center;
+        margin-right: 10px;
         img {
             margin-right: 11px;
-        }   
+            margin-bottom: 3px;
+        }
+        span {
+
+        }
+    }
+    &__user {
+        display: inline-block;
+        margin-bottom: 3px;
     }
     &__burger {
         display: none;
@@ -140,14 +154,15 @@ body, a {
     flex-direction: column;
     position: absolute;
     z-index: 9;
-    top: 78px;
+    top: 88px;
     right: 0;
     background-color: #1c242a;
-    padding: 20px 20px 20px 40px;
+    padding: 12px 20px 12px 40px;
     align-items: baseline;
+    /* Невидимое до нажатия */
     opacity: 0;
     visibility: hidden;
-
+    transition: all 0.3s ease;
     &__link {
         display: flex;
         color: #fff;
@@ -164,9 +179,11 @@ body, a {
         }
     }
 }
+/* Класс, который добавляется при клике */
 .user-menu--active {
     opacity: 1;
     visibility: visible;
+    top: 78px;
 }
 .mobile {
     &__nav {
@@ -805,18 +822,15 @@ body, a {
     .container {
         padding: 0 25px;
     }
-    .user-menu {
-        display: none;
-    }
     .header {
-        &__burger {
-            display: block;
-        }
-        &__nav, &__region, &__user {
-            display: none;
-        }
-        &__logo {
-            margin-top: 10px;
+        &__region {
+            span {
+                display: none;
+            }
+            img {
+                margin-right: 0;
+                margin-bottom: 3px;
+            }
         }
     }
     .items {
@@ -846,6 +860,20 @@ body, a {
 }
 
 @media (max-width: 767px) {
+    .user-menu {
+        display: none;
+    }
+    .header {
+        &__burger {
+            display: block;
+        }
+        &__nav, &__region, &__user {
+            display: none;
+        }
+        &__logo {
+            margin-top: 10px;
+        }
+    }
     .service {
         & img {
             width: 150px;
