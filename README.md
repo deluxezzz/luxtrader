@@ -1,5 +1,5 @@
 
-## Верстка desktop-лендинга аукциона Luxtrader. 
+## Верстка desktop-версии сайта-лендинга аукциона Luxtrader. 
 
 Сайт сверстан на flexbox без использования bootstrap.</br> 
 
